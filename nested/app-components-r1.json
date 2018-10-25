@@ -67,9 +67,6 @@
                     "dependsOn": [
                         "[concat('Microsoft.Web/sites/', parameters('webSiteSettings').deviceManagementPortalWebSiteName)]"
                     ],
-                    "tags": {
-                        "displayName": "WebAppConfig"
-                    },
                     "properties": {
                         "phpVersion": "5.6",
                         "netFrameworkVersion": "v4.6",
@@ -89,9 +86,6 @@
                         "[resourceId('Microsoft.Web/sites', parameters('webSiteSettings').deviceManagementPortalWebSiteName)]",
                         "[concat('Microsoft.Web/Sites/', parameters('webSiteSettings').deviceManagementPortalWebSiteName, '/config/web')]"
                     ],
-                    "tags": {
-                        "displayName": "WebPackageDeploy"
-                    },
                     "properties": {
                         "packageUri": "[parameters('webSiteSettings').deviceManagementPortalPackageuriWm]"
                     }

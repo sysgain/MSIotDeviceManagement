@@ -55,9 +55,6 @@
                     "type": "Microsoft.Automation/automationAccounts/modules",
                     "apiVersion": "2015-10-31",
                     "scale": null,
-                    "tags": {
-                        "moduleName": "module1"
-                    },
                     "properties": {
                         "contentLink": {
                             "uri": "[parameters('automationSettings').cosmosdbModuleUri]"
@@ -73,9 +70,6 @@
                     "type": "Microsoft.Automation/automationAccounts/modules",
                     "apiVersion": "2015-10-31",
                     "scale": null,
-                    "tags": {
-                        "moduleName": "module2"
-                    },
                     "properties": {
                         "contentLink": {
                             "uri": "[parameters('automationSettings').azureAdPreviewModuleUri]"
@@ -92,9 +86,6 @@
                     "type": "Microsoft.Automation/automationAccounts/jobs",
                     "apiVersion": "2015-10-31",
                     "location": "[parameters('automationSettings').automationLocation]",
-                    "tags": {
-                        "job": "job1"
-                    },
                     "properties": {
                         "runbook": {
                             "name": "[parameters('automationSettings').runbookName]"
