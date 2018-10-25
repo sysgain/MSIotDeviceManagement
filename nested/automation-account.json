@@ -5,7 +5,7 @@
         "automationSettings": {
             "type": "object"
         },
-        "deviceManagementUri":{
+        "deviceManagementUri": {
             "type": "string"
         },
         "documentDbSettings": {
@@ -17,8 +17,11 @@
         {
             "name": "[parameters('automationSettings').automationAccountName]",
             "type": "Microsoft.Automation/automationAccounts",
-            "apiVersion":"2015-10-31",
+            "apiVersion": "2015-10-31",
             "location": "[parameters('automationSettings').automationLocation]",
+            "tags": {
+                "displayName": "Automation"
+            },
             "properties": {
                 "sku": {
                     "name": "[parameters('automationSettings').automationSku]"
@@ -28,11 +31,14 @@
                 {
                     "name": "[parameters('automationSettings').runbookName]",
                     "type": "runbooks",
-                    "apiVersion":"2015-10-31",
+                    "apiVersion": "2015-10-31",
                     "location": "[parameters('automationSettings').automationLocation]",
                     "dependsOn": [
                         "[concat('Microsoft.Automation/automationAccounts/', parameters('automationSettings').automationAccountName)]"
                     ],
+                    "tags": {
+                        "displayName": "Runbook"
+                    },
                     "properties": {
                         "runbookType": "Script",
                         "logProgress": "false",
@@ -49,8 +55,11 @@
                     "type": "Microsoft.Automation/automationAccounts/modules",
                     "apiVersion": "2015-10-31",
                     "scale": null,
+                    "tags": {
+                        "moduleName": "module1"
+                    },
                     "properties": {
-                        "contentLink": { 
+                        "contentLink": {
                             "uri": "[parameters('automationSettings').cosmosdbModuleUri]"
                         }
                     },
@@ -64,8 +73,11 @@
                     "type": "Microsoft.Automation/automationAccounts/modules",
                     "apiVersion": "2015-10-31",
                     "scale": null,
+                    "tags": {
+                        "moduleName": "module2"
+                    },
                     "properties": {
-                        "contentLink": { 
+                        "contentLink": {
                             "uri": "[parameters('automationSettings').azureAdPreviewModuleUri]"
                         }
                     },
@@ -78,8 +90,11 @@
                 {
                     "name": "[concat(parameters('automationSettings').automationAccountName, '/', parameters('automationSettings').sessionId)]",
                     "type": "Microsoft.Automation/automationAccounts/jobs",
-                    "apiVersion":"2015-10-31",
+                    "apiVersion": "2015-10-31",
                     "location": "[parameters('automationSettings').automationLocation]",
+                    "tags": {
+                        "job": "job1"
+                    },
                     "properties": {
                         "runbook": {
                             "name": "[parameters('automationSettings').runbookName]"

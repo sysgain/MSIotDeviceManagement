@@ -22,7 +22,9 @@
             "location": "[parameters('omsSettings').omsWorkspaceRegion]",
             "name": "[parameters('omsSettings').omsWorkspaceName]",
             "type": "Microsoft.OperationalInsights/workspaces",
-            "comments": "Log Analytics workspace",
+            "tags":{
+                "omsName": "Log Analytics workspace"
+            },
             "properties": {
                 "sku": {
                     "name": "[parameters('omsSettings').omsLogAnalyticsSku]"

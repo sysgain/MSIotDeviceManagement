@@ -16,6 +16,9 @@
             "type": "Microsoft.Network/trafficmanagerprofiles",
             "name": "[parameters('trafficManagerSettings').trafficManagerName]",
             "location": "global",
+            "tags": {
+                "trafficManagerType": "Standard"
+            },
             "properties": {
                 "trafficRoutingMethod": "[parameters('trafficManagerSettings').trafficRoutingMethod]",
                 "dnsConfig": {
