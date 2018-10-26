@@ -147,7 +147,7 @@
             "omsWorkspaceRegion": "[parameters('omsWorkspaceRegion')]",
             "omsLogAnalyticsSku": "standalone",
             "dataRetention": 7,
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "iotHubSettings": {
             "location": "[parameters('geo-paired-region')]",
@@ -159,7 +159,7 @@
             "d2cPartitionCount": 2,
             "consumerGroupName": "$Default",
             "d2cConsumerGroupName": "consumergrp_",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "documentDbSettings": {
             "location": "[parameters('geo-paired-region')]",
@@ -170,7 +170,7 @@
             "cosmosDbColTemplateName": "Templates",
             "cosmosDbColMessagesName": "Messages",
             "cosmosDbColGroupsName": "Groups",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "notificationHub": {
             "location": "[parameters('geo-paired-region')]",
@@ -181,14 +181,14 @@
             "notificationHubName": "[concat('NotificationHub', variables('suffix'))]",
             "notificationHubNamespaceNameDr": "[concat('RecoveryNotificationHubNS', variables('suffix'))]",
             "notificationHubNameDr": "[concat('RecoveryNotificationHub', variables('suffix'))]",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "appInsights": {
             "location": "[parameters('appInsightsLocation')]",
             "appInsightResourceName": "[concat('AppInsights', uniquestring(resourceGroup().id))]",
             "locationDr": "[parameters('appInsightsLocationDr')]",
             "appInsightResourceNameDr": "[concat('RecoveryAppInsights', uniquestring(resourceGroup().id))]",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "automationSettings": {
             "automationAccountName": "[concat('AutomationAcc', variables('suffix'))]",
@@ -207,12 +207,12 @@
             "objectId": "[parameters('objectId')]",
             "azureAccountName": "[parameters('azureAccountName')]",
             "azurePassword": "[parameters('azurePassword')]",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "trafficManagerSettings": {
             "trafficManagerName": "[concat('devicemanagetm', variables('suffix'))]",
             "trafficRoutingMethod": "Priority",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "streamAnalytics": {
             "location": "[parameters('geo-paired-region')]",
@@ -222,7 +222,7 @@
             "sku": "Standard",
             "suiteType": "RemoteMonitoring",
             "telemetryCGName": "telemetrycg",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "webSiteSettings": {
             "location": "[parameters('geo-paired-region')]",
@@ -237,7 +237,7 @@
             "webAppSkuName2": "S1",
             "deviceManagementPortalWebSiteName": "[concat('devicemanagement', variables('suffix'))]",
             "deviceManagementPortalWebSiteNameDr": "[concat('recoverydeviceManagement', variables('suffix'))]",
-            "IotSuiteType": "[parameters('solutionType')]"
+            "solutionType": "[parameters('solutionType')]"
         },
         "suffix": "[substring(uniqueString(resourceGroup().id), 0, 5)]",
         "baseUrl": "https://raw.githubusercontent.com/sysgain/MSIotDeviceManagement/tags/",
