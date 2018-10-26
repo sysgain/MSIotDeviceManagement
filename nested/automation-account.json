@@ -20,7 +20,7 @@
             "apiVersion": "2015-10-31",
             "location": "[parameters('automationSettings').automationLocation]",
             "tags": {
-                "displayName": "Automation"
+                "IotSuiteType": "[parameters('automationSettings').solutionType]"
             },
             "properties": {
                 "sku": {
@@ -37,7 +37,7 @@
                         "[concat('Microsoft.Automation/automationAccounts/', parameters('automationSettings').automationAccountName)]"
                     ],
                     "tags": {
-                        "displayName": "Runbook"
+                        "IotSuiteType": "[parameters('automationSettings').solutionType]"
                     },
                     "properties": {
                         "runbookType": "Script",

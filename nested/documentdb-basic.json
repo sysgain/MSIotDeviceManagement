@@ -18,7 +18,7 @@
             "type": "Microsoft.DocumentDb/databaseAccounts",
             "location": "[parameters('documentDbSettings').location]",
             "tags": {
-                "defaultExperience": "DocumentDB"
+                "IotSuiteType": "[parameters('documentDbSettings').solutionType]"
             },
             "properties": {
                 "databaseAccountOfferType": "[parameters('documentDbSettings').databaseAccountOfferType]",
@@ -72,7 +72,7 @@
                 }
             ],    
             "tags": {
-                "defaultExperience": "DocumentDB"
+                "IotSuiteType": "[parameters('documentDbSettings').solutionType]"
             }
         }   
     ],

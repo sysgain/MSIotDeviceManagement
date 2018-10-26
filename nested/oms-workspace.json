@@ -22,8 +22,8 @@
             "location": "[parameters('omsSettings').omsWorkspaceRegion]",
             "name": "[parameters('omsSettings').omsWorkspaceName]",
             "type": "Microsoft.OperationalInsights/workspaces",
-            "tags":{
-                "omsName": "Log Analytics workspace"
+            "tags": {
+                "IotSuiteType": "[parameters('omsSettings').solutionType]"
             },
             "properties": {
                 "sku": {

@@ -17,7 +17,7 @@
             "name": "[parameters('trafficManagerSettings').trafficManagerName]",
             "location": "global",
             "tags": {
-                "trafficManagerType": "Premium"
+                "IotSuiteType": "[parameters('trafficManagerSettings').solutionType]"
             },
             "properties": {
                 "trafficRoutingMethod": "[parameters('trafficManagerSettings').trafficRoutingMethod]",
