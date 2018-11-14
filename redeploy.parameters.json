@@ -8,6 +8,9 @@
         "appInsightsLocationDr": {
             "value": "westus2"
         },
+        "solutionType": {
+            "value": "DeviceManagement"
+        },
         "tenantId": {
             "value": "xxxxxxx-xxxa-4xxx-xxxe-xxxxcxd3xxxx8"
         },

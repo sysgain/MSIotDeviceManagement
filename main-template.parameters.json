@@ -2,11 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "solution type": {
+        "deployment type": {
             "value": "Basic"
         },
         "geo-paired-region": {
             "value":  "EastUS2"
+        },
+        "solutionType": {
+            "value": "DeviceManagement"
         },
         "omsWorkspaceRegion": {
             "value": "canadacentral"
