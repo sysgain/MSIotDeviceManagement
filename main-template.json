@@ -43,7 +43,7 @@
         },
          "solutionType": {
             "type": "string",
-            "defaultValue": "WhiteGoods",
+            "defaultValue": "DeviceManagement",
             "metadata": {
                 "description": "The type of the solution"
             }
