@@ -833,7 +833,7 @@
             "name": "TrafficManagerHot",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Standard')]",
+            "condition": "[equals(parameters('deployment type'),'Premium')]",
             "dependsOn": [
                 "WebAppR1",
                 "WebAppHot"
