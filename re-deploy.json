@@ -26,7 +26,14 @@
                 "UKWest"
             ],
             "metadata": {
-                "description": "Choose location for geo-paired-region, for more information about the geo-paired-region navigate to section 4 in the Readme.md(https://github.com/sysgain/MSIotDeviceManagement/blob/master/README.md)"
+                "description": "Choose location for geo-paired-region, for more information about the geo-paired-region navigate to section 6 in the Readme.md(https://github.com/sysgain/Oil-Gas/blob/costing-models/README.md)"
+            }
+        },
+        "solutionType": {
+            "type": "string",
+            "defaultValue": "DeviceManagement",
+            "metadata": {
+                "description": "The type of the solution"
             }
         },
         "appInsightsLocationDr": {
@@ -42,13 +49,6 @@
             ],
             "metadata": {
                 "description": "If solution type is choosen as premium, enter location for application insights for disaster recovery"
-            }
-        },
-        "solutionType": {
-            "type": "string",
-            "defaultValue": "DeviceManagement",
-            "metadata": {
-                "description": "The type of the solution"
             }
         },
         "tenantId": {
@@ -130,7 +130,7 @@
             "tenantId": "[parameters('tenantId')]",
             "clientId": "[parameters('clientId')]",
             "clientSecret": "[parameters('clientSecret')]",
-            "deviceManagementPortalPackageuriWm": "https://projectiot.blob.core.windows.net/whitegoods/appinsights/DeviceManagementPortalAI.zip",
+            "deviceManagementPortalPackageuriWm": "https://github.com/sysgain/MSIotDeviceManagement/raw/tags/code/builds/DeviceManagementPortalAI.zip",
             "webAppHostingPlanNameDr": "[concat('AppPlanWGDr', variables('suffix'))]",
             "webAppSkuName1": "B1",
             "deviceManagementPortalWebSiteName": "[concat('devicemanagement', variables('suffix'))]",

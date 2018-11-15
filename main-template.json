@@ -11,7 +11,7 @@
                 "Premium"
             ],
             "metadata": {
-                "description": "choose your solution type to deploy"
+                "description": "choose your deployment type to deploy"
             }
         },
         "geo-paired-region": {
@@ -41,7 +41,7 @@
                 "description": "For Basic solution select the geopaired region as deployment region.If solution type is choosen as standard and premium, enter location for geo-paired-region, for more information about the geo-paired-region navigate to section 4 in the Getting Started Document(https://projectiot.blob.core.windows.net/whitegoods/Documents/GettingStartedDocumentV1.docx)"
             }
         },
-         "solutionType": {
+          "solutionType": {
             "type": "string",
             "defaultValue": "DeviceManagement",
             "metadata": {
@@ -139,6 +139,27 @@
             "metadata": {
                 "description": "Provide the guid prefix for the runbook job to be created. Generate using https://www.guidgenerator.com/online-guid-generator.aspx"
             }
+        },
+        "cosmosdbModuleUri": {
+            "type": "string",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/tags/code/builds/cosmos.zip",
+            "metadata": {
+                "description": "Provide the url to install cosmosdb module to deploy in azure automation from the github"
+            }
+        },
+        "azureAdPreviewModuleUri":{
+            "type": "string",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/tags/code/builds/AzureADPreview.zip",
+            "metadata": {
+                "description": "Provide the url to install azure active directory preview module in azure automation from the github"
+            }
+        },
+        "deviceManagementUriWm":{
+            "type": "string",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/tags/code/builds/DeviceManagementPortalAI.zip",
+            "metadata": {
+                "description": "Provide the url to deploy the devicemanagement application from the github"
+            }
         }
     },
     "variables": {
@@ -197,8 +218,8 @@
             "runbookName": "container",
             "moduleName": "CosmosDB",
             "moduleName1": "AzureADPreview",
-            "cosmosdbModuleUri": "https://projectiot.blob.core.windows.net/whitegoods/cosmos.zip",
-            "azureAdPreviewModuleUri": "https://projectiot.blob.core.windows.net/whitegoods/AzureADPreview.zip",
+            "cosmosdbModuleUri": "[parameters('cosmosdbModuleUri')]",
+            "azureAdPreviewModuleUri":"[parameters('azureAdPreviewModuleUri')]",
             "runbookUri": "[concat(variables('baseUrl'),'scripts/initializecosmosdb.ps1')]",
             "sessionId": "[parameters('sessionId')]",
             "tenantId": "[parameters('tenantId')]",
@@ -230,7 +251,7 @@
             "tenantId": "[parameters('tenantId')]",
             "clientId": "[parameters('clientId')]",
             "clientSecret": "[parameters('clientSecret')]",
-            "deviceManagementPortalPackageuriWm": "https://projectiot.blob.core.windows.net/whitegoods/appinsights/DeviceManagementPortalAI.zip",
+            "deviceManagementPortalPackageuriWm":  "[parameters('deviceManagementUriWm')]",
             "webAppHostingPlanName": "[concat('AppPlanWG', variables('suffix'))]",
             "webAppHostingPlanNameDr": "[concat('AppPlanWGDr', variables('suffix'))]",
             "webAppSkuName1": "B1",
@@ -306,7 +327,7 @@
         {
             "name": "IotHubR1",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[or(equals(parameters('deployment type'),'Standard'), equals(parameters('deployment type'),'Premium'))]",
+            "condition": "[or(equals(parameters('deployment Type'),'Standard'), equals(parameters('deployment Type'),'Premium'))]",
             "apiVersion": "2016-02-01",
             "dependsOn": [
                 "OMSWorkSpace"
@@ -330,7 +351,7 @@
         {
             "name": "DocumentDBBasic",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Basic')]",
+            "condition": "[equals(parameters('deployment Type'),'Basic')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [
                 "OMSWorkSpace"
@@ -355,7 +376,7 @@
             "name": "DocumentDBR1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[or(equals(parameters('deployment type'),'Standard'), equals(parameters('deployment type'),'Premium'))]",
+            "condition": "[or(equals(parameters('deployment Type'),'Standard'), equals(parameters('deployment Type'),'Premium'))]",
             "dependsOn": [
                 "OmsWorkSpace"
             ],
@@ -378,7 +399,7 @@
         {
             "name": "NotificationHubBasic",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Basic')]",
+            "condition": "[equals(parameters('deployment Type'),'Basic')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [],
             "properties": {
@@ -398,7 +419,7 @@
             "name": "NotificationHubR1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[or(equals(parameters('deployment type'),'Standard'), equals(parameters('deployment type'),'Premium'))]",
+            "condition": "[or(equals(parameters('deployment Type'),'Standard'), equals(parameters('deployment Type'),'Premium'))]",
             "dependsOn": [],
             "properties": {
                 "mode": "Incremental",
@@ -417,7 +438,7 @@
             "name": "NotificationHubR2",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [],
             "properties": {
                 "mode": "Incremental",
@@ -453,7 +474,7 @@
         {
             "name": "AppInsightsR2",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [],
             "properties": {
@@ -472,7 +493,7 @@
         {
             "name": "AutomationAccountBasic",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Basic')]",
+            "condition": "[equals(parameters('deployment Type'),'Basic')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [
                 "WebAppBasic"
@@ -500,7 +521,7 @@
             "name": "AutomationAccountR1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Standard')]",
+            "condition": "[equals(parameters('deployment Type'),'Standard')]",
             "dependsOn": [
                 "TrafficManagerCold"
             ],
@@ -527,7 +548,7 @@
             "name": "AutomationAccountR2",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [
                 "TrafficManagerHot"
             ],
@@ -553,7 +574,7 @@
         {
             "name": "StreamAnalyticsBasic",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Basic')]",
+            "condition": "[equals(parameters('deployment Type'),'Basic')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [
                 "IotHubBasic",
@@ -587,7 +608,7 @@
             "name": "StreamAnalyticsCold",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Standard')]",
+            "condition": "[equals(parameters('deployment Type'),'Standard')]",
             "dependsOn": [
                 "DocumentDBR1",
                 "AutomationAccountR1",
@@ -619,7 +640,7 @@
             "name": "StreamAnalyticsHot",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [
                 "DocumentDBR1",
                 "AutomationAccountR2",
@@ -651,7 +672,7 @@
             "name": "StreamAnalyticsR2Hot",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [
                 "OmsWorkSpace",
                 "IotHubR1",
@@ -682,7 +703,7 @@
         {
             "name": "WebAppBasic",
             "type": "Microsoft.Resources/deployments",
-            "condition": "[equals(parameters('deployment type'),'Basic')]",
+            "condition": "[equals(parameters('deployment Type'),'Basic')]",
             "apiVersion": "2016-02-01",
             "dependsOn": [
                 "IotHubBasic",
@@ -723,7 +744,7 @@
             "name": "WebAppR1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[or(equals(parameters('deployment type'),'Standard'), equals(parameters('deployment type'),'Premium'))]",
+            "condition": "[or(equals(parameters('deployment Type'),'Standard'), equals(parameters('deployment Type'),'Premium'))]",
             "dependsOn": [
                 "IotHubR1",
                 "DocumentDBR1",
@@ -766,7 +787,7 @@
             "name": "WebAppHot",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [
                 "IotHubR1",
                 "DocumentDBR1",
@@ -809,7 +830,7 @@
             "name": "TrafficManagerCold",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Standard')]",
+            "condition": "[equals(parameters('deployment Type'),'Standard')]",
             "dependsOn": [
                 "WebAppR1"
             ],
@@ -833,7 +854,7 @@
             "name": "TrafficManagerHot",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2016-02-01",
-            "condition": "[equals(parameters('deployment type'),'Premium')]",
+            "condition": "[equals(parameters('deployment Type'),'Premium')]",
             "dependsOn": [
                 "WebAppR1",
                 "WebAppHot"
