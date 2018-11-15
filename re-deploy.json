@@ -132,7 +132,7 @@
             "clientSecret": "[parameters('clientSecret')]",
             "deviceManagementPortalPackageuriWm": "https://github.com/sysgain/MSIotDeviceManagement/raw/tags/code/builds/DeviceManagementPortalAI.zip",
             "webAppHostingPlanNameDr": "[concat('AppPlanWGDr', variables('suffix'))]",
-            "webAppSkuName1": "B1",
+            "webAppSkuName2": "S1",
             "deviceManagementPortalWebSiteName": "[concat('devicemanagement', variables('suffix'))]",
             "deviceManagementPortalWebSiteNameDr": "[concat('recoverydeviceManagement', variables('suffix'))]",
             "solutionType": "[parameters('solutionType')]"
