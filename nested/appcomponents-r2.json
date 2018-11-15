@@ -35,7 +35,7 @@
                 "IotSuiteType": "[parameters('webSiteSettings').solutionType]"
             },
             "sku": {
-                "name": "[parameters('webSiteSettings').webAppSkuName2]",
+                "name": "[parameters('webSiteSettings').webAppSkuName1]",
                 "capacity": "1"
             },
             "properties": {
