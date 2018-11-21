@@ -403,7 +403,7 @@ Prices are calculated by Considering Location as East US and Pricing Model as **
 
 This Solution provides (Core + Monitoring +Hardening) features such as application Insights, OMS Log Analytics, High Availability, Security & Disaster recovery. The details on components used in this solution is listed in Section: 
 
-* The Estimated Monthly Azure cost is: **$209.66**
+* The Estimated Monthly Azure cost is: **$209.66pdatwd costing**
 
 'Note: Refer below table for the optional component list & Features.'
 
