@@ -309,7 +309,7 @@ The IoT Hub information is displayed below the page as shown in the following fi
 
 ![alt text](https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/135.png)
 
-Copy **Cusmos DB** resource name, paste it in the **Converter** box and click **RUN**. 
+Copy **Cosmos DB** resource name, paste it in the **Converter** box and click **RUN**. 
 
 The cosmos db information is displayed in the below page as shown in the following figure. 
 
