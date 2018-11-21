@@ -124,7 +124,7 @@ Basic solution will have all core components, in addition this solution also con
 The below diagram depicts the dataflow between azure components:
 
 <p align="center">
-  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/dataflow.jpg">
+  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/d1.png">
 </p>
 
 Basic Architecture comprises of following components:
