@@ -394,7 +394,7 @@ Prices are calculated by Considering Location as East US and Pricing Model as **
 | **IoT HUB**        | Standard Tier: S1, Unlimited devices, 1 Unit-$25.00/per month 400,000 messages/da                      | $25.00    
 | **Log Analytics**      | First 5GB of data storage is free. Per GB(Standalone). After finishing 5GB, $2.30 per GB.                          | $2.30  
 | **Azure Automation Account**        | Capability: Process Automation 500 minutes of process automation and 744 hours of watchers are free each month     | $0.00   
-| **Notification Hub**       | Free                          | $0.00 
+| **Notification Hub**       | Free, Includes 1 million pushes for 500 active devices.                        | $0.00 
 | **Application Insight**       | Basic, 1GB * $2.30 Region: East US first 5GB free per month          | $2.30 
 | **Stream Analytics**   | Standard Streaming Unit, 1 unit(s) 1 * $80.30    | $80.30 
 |                     | **Estimated monthly cost**          | **190.51** 
@@ -443,7 +443,7 @@ Prices are calculated by Considering Location as East US and Pricing Model as **
 | IoT-Hub                  	| S1, Unlimited devices, 1 Unit-$25.00/per month 400,000 messages/day                                               	| $25.00           	|
 | Log Analytics            	| First 5GB of data storage is free. Per GB(Standalone). After finishing 5GB, $2.30 per GB.                         	| $2.30            	|
 | Azure Automation Account 	| 2*Capability: Process Automation 500 minutes of process automation and 744 hours of watchers are free each month. 	| $0.00            	|
-| Notification Hub         	| 2 * Free                                                                                                          	| $0.00            	|
+| Notification Hub         	| 2 * Free, Includes 1 million pushes for 500 active devices.                                                        	| $0.00            	|
 | Application Insight      	| 2 * Basic, 1GB * $2.30 First 5GB free per month                                                                   	| $4.60            	|
 | Stream Analytics         	| 2 * Standard Streaming Unit, 1 unit(s) 1 * $80.30                                                                 	| $160.60          	|
 | Traffic Manager          	| DNS Query $0.54 + Azure Endpoint $0.36                                                                            	| $0.90            	|
@@ -487,21 +487,21 @@ The below Table explains the $ impact for the solutions by resources.
 
 | Resource Name            	| Basic  	| Standard 	| Premium 	|
 |--------------------------	|--------	|----------	|---------	|
-| App Service Plan         	| $54.75 	| $146.00  	| $146.00 	|
+| App Service Plan         	| $54.75 	| $73.00  	| $146.00 	|
 | Cosmos DB                	| $25.86 	| $25.86   	| $25.86  	|
-| Stream Analytics         	| $80.30 	| $160.60  	| $160.60 	|
+| Stream Analytics         	| $80.30 	| $80.30  	| $160.60 	|
 | IoT-Hub                  	| $25.00 	| $25.00   	| $25.00  	|
-| Application Insights     	| $2.30  	| $2.30    	| $2.30   	|
+| Application Insights     	| $2.30  	| $2.30    	| $4.60   	|
 | Log Analytics            	| $2.30  	| $2.30    	| $2.30   	|
 | Notification Hub         	| $0.00  	| $0.00    	| $0.00   	|
 | Azure Automation Account 	| $0.00  	| $0.00    	| $0.00   	|
-| Traffic Manager          	| $0.00  	| $0.54    	| $0.54   	|     
+| Traffic Manager          	| $0.00  	| $0.90    	| $0.90  	|     
 
 #### 3.2.3. Estimated Monthly Cost for each Solution:
 
 | Resource Name          	| Basic   	| Standard 	| Premium 	|
 |------------------------	|---------	|----------	|---------	|
-| Estimated monthly cost 	| $190.51 	| $364.90  	| $364.90 	|
+| Estimated monthly cost 	| $190.51 	| $209.66  	| $365.26 	|
 
 ## 4. What are paired regions? 
 
