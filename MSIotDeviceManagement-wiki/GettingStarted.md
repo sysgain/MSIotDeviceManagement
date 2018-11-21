@@ -79,7 +79,7 @@ The Rationale behind this IOT Solution for Whitegoods is to:
 Below Diagram explains the Core architecture for White Goods solution
 
 <p align="center">
-  <img src="https://github.com/sysgain/whitegoods/raw/master/Images/A1.png">
+  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/corearchitecture.png">
 </p>
 
 Core Architecture components:
@@ -124,7 +124,7 @@ Basic solution will have all core components, in addition this solution also con
 The below diagram depicts the dataflow between azure components:
 
 <p align="center">
-  <img src="https://github.com/sysgain/whitegoods/raw/master/Images/D1.png">
+  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/dataflow.jpg">
 </p>
 
 Basic Architecture comprises of following components:
@@ -154,7 +154,7 @@ The main use of this solution is whenever disaster recovery occurs the redeploym
 The below diagram depicts the dataflow between azure components in standard solution:
 
 <p align="center">
-  <img src="https://github.com/sysgain/whitegoods/raw/master/Images/A2.png">
+  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/A2.png">
 </p>
 
 Standard Architecture comprises of following components:
@@ -193,7 +193,7 @@ We have IoT Hub manual failover, Cosmos DB geo replication. Initially the Stream
 
 The below diagram depicts the dataflow between azure components in premium solution:
 
-![alt text](https://github.com/sysgain/whitegoods/raw/master/Images/A3.png)
+![alt text](https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/A3.png)
 
 Premium Architecture comprises of following components:
 
@@ -214,7 +214,7 @@ This type of solution reduces downtime of solution when region is down. In this 
 ### 2.4 Conventional Data Work Flow 
 
 <p align="center">
-  <img src="https://github.com/sysgain/whitegoods/raw/master/Images/D2.png">
+  <img src="https://github.com/sysgain/MSIotDeviceManagement/raw/master/Images/D2.png">
 </p>
 
 ### 2.5 Azure Components Functionality
@@ -534,12 +534,12 @@ Each Azure region is paired with another region within the same geography, toget
 
 ## 5. Deployment Guide for the Solution
 
-To deploy the Basic, Standard or Premium Solution please refer **[Deployment Guide Documentation](https://github.com/ooha-m/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/DeploymentGuide.md)**.
+To deploy the Basic, Standard or Premium Solution please refer **[Deployment Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/DeploymentGuide.md)**.
 
 ## 6. User Guide for the Solution
 
-For Running Blink Application and verifying the Device Management Web application, please refer **[User Guide Documentation](https://github.com/ooha-m/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/UserGuide.md)**.
+For Running Blink Application and verifying the Device Management Web application, please refer **[User Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/UserGuide.md)**.
 
 ## 7. Administrator Guide for the Solution
 
-To configure and validate the Standard and Premium Solution, please refer the **[Administrator Guide Documentation](https://github.com/ooha-m/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/AdminGuide.md)**.
+To configure and validate the Standard and Premium Solution, please refer the **[Administrator Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/AdminGuide.md)**.

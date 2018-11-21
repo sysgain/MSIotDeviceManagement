@@ -38,14 +38,14 @@
                 "UKWest"
             ],
             "metadata": {
-                "description": "For Basic solution select the geopaired region as deployment region.If solution type is choosen as standard and premium, enter location for geo-paired-region, for more information about the geo-paired-region navigate to section 4 in the Getting Started Document(https://projectiot.blob.core.windows.net/whitegoods/Documents/GettingStartedDocumentV1.docx)"
+                "description": "For Basic solution select the geopaired region as deployment region.If solution type is choosen as standard and premium, enter location for geo-paired-region, for more information about the geo-paired-region navigate to section 4 in the Getting Started Document(https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/GettingStarted.md)"
             }
         },
           "solutionType": {
             "type": "string",
             "defaultValue": "DeviceManagement",
             "metadata": {
-                "description": "The type of the solution"
+                "description": "The type of solution"
             }
         },
         "omsWorkspaceRegion": {
@@ -142,21 +142,21 @@
         },
         "cosmosdbModuleUri": {
             "type": "string",
-            "defaultValue": "https://github.com/ooha-m/MSIotDeviceManagement/raw/master/code/builds/cosmos.zip",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/master/code/builds/cosmos.zip",
             "metadata": {
                 "description": "Provide the url to install cosmosdb module to deploy in azure automation from the github"
             }
         },
         "azureAdPreviewModuleUri":{
             "type": "string",
-            "defaultValue": "https://github.com/ooha-m/MSIotDeviceManagement/raw/master/code/builds/AzureADPreview.zip",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/master/code/builds/AzureADPreview.zip",
             "metadata": {
                 "description": "Provide the url to install azure active directory preview module in azure automation from the github"
             }
         },
         "deviceManagementUriWm":{
             "type": "string",
-            "defaultValue": "https://github.com/ooha-m/MSIotDeviceManagement/raw/master/code/builds/DeviceManagementPortalAI.zip",
+            "defaultValue": "https://github.com/sysgain/MSIotDeviceManagement/raw/master/code/builds/DeviceManagementPortalAI.zip",
             "metadata": {
                 "description": "Provide the url to deploy the devicemanagement application from the github"
             }
@@ -261,7 +261,7 @@
             "solutionType": "[parameters('solutionType')]"
         },
         "suffix": "[substring(uniqueString(resourceGroup().id), 0, 5)]",
-        "baseUrl": "https://raw.githubusercontent.com/ooha-m/MSIotDeviceManagement/master/",
+        "baseUrl": "https://raw.githubusercontent.com/sysgain/MSIotDeviceManagement/master/",
         "EastUS2": "CentralUS",
         "CentralUS": "EastUS2",
         "WestUS2": "West Central US",
