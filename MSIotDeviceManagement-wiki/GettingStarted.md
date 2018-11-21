@@ -403,7 +403,7 @@ Prices are calculated by Considering Location as East US and Pricing Model as **
 
 This Solution provides (Core + Monitoring +Hardening) features such as application Insights, OMS Log Analytics, High Availability, Security & Disaster recovery. The details on components used in this solution is listed in Section: 
 
-* The Estimated Monthly Azure cost is: **$364.90**
+* The Estimated Monthly Azure cost is: **$209.66**
 
 'Note: Refer below table for the optional component list & Features.'
 
@@ -430,7 +430,7 @@ Prices are calculated by Location as East US and Pricing Model as **“PAYG”**
 
 This solution also provides (Core + Monitoring +Hardening), the difference between Standard & Premium solution is under Premium - Both the regions can be deployed at same time, and however this is not possible under standard solution. The details on components used in this solution is listed in Section: 
 
-* The Estimated Monthly Azure cost is: **$364.90**
+* The Estimated Monthly Azure cost is: **$365.26**
 
 **Pricing Model for Premium Solution:**
 
