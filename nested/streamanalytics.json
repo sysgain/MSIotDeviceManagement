@@ -23,7 +23,7 @@
             "name": "[parameters('streamAnalytics').streamAnalyticsjobname]",
             "location": "[parameters('streamAnalytics').location]",
             "tags": {
-                "IotSuiteType": "[parameters('streamAnalytics').suiteType]"
+                "IotSuiteType": "[parameters('streamAnalytics').solutionType]"
             },
             "properties": {
                 "sku": {
@@ -83,7 +83,7 @@
                 {
                     "name": "Microsoft.Insights/service",
                     "type": "providers/diagnosticSettings",
-                    "apiVersion": "2015-07-01",
+                    "apiVersion": "2016-09-01",
                     "dependsOn": [
                         "[concat('Microsoft.StreamAnalytics/StreamingJobs/', parameters('streamAnalytics').streamAnalyticsjobname)]"
                     ],

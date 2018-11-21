@@ -17,6 +17,9 @@
             "kind": "GlobalDocumentDB",
             "type": "Microsoft.DocumentDb/databaseAccounts",
             "location": "[parameters('documentDbSettings').location]",
+            "tags": {
+                "IotSuiteType": "[parameters('documentDbSettings').solutionType]"
+            },
             "properties": {
                 "databaseAccountOfferType": "[parameters('documentDbSettings').databaseAccountOfferType]",
                 "locations": [
@@ -34,7 +37,7 @@
                 {
                     "name": "Microsoft.Insights/service",
                     "type": "providers/diagnosticSettings",
-                    "apiVersion": "2015-07-01",
+                    "apiVersion": "2016-09-01",
                     "dependsOn": [
                         "[concat('Microsoft.DocumentDb/databaseAccounts/', parameters('documentDbSettings').cosmosDbAccountName)]"
                     ],
@@ -73,7 +76,7 @@
                 }
             ],    
             "tags": {
-                "defaultExperience": "DocumentDB"
+                "IotSuiteType": "[parameters('documentDbSettings').solutionType]"
             }
         }   
     ],
