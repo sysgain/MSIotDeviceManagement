@@ -413,16 +413,17 @@ Prices are calculated by Location as East US and Pricing Model as **“PAYG”**
 
 | **Resource Name**           | **Size**           | **Azure Cost/month**                                                                                                                              
 | -------------              | -------------       | --------------------                                                                                                                                
-| **App Service Plan**       | Standard Tier; S1: 2 (Core(s), 1.75 GB RAM, 50 GB Storage) x 730 Hours; Windows OS    | $146.00  
+| **App Service Plan**       | Standard Tier; S1: Core(s), 1.75 GB RAM, 50 GB Storage x 730 Hours; Windows OS    | $73.00  
 | **Cosmos DB**   | Standard, throughput 400 RU/s (Request Units per second) 4x100 Rus(Throughput)- $23.36 10 GB storage – $2.50   | $25.86
 | **IoT HUB**        | Standard Tier: S1, Unlimited devices, 1 Unit-$25.00/per month 400,000 messages/day          | $25.00    
 | **Log Analytics**      | First 5GB of data storage is free. Per GB(Standalone) Region East US. After finishing 5GB, $2.30 per GB.     | $2.30   
-| **Azure Automation Account**        | 2*Capability: Process Automation 500 minutes of process automation and 744 hours of watchers are free each month.    | $0.00   
-| **Notification Hub**       | 2*Free                          | $0.00 
-| **Application Insight**       | 2 * Basic, 1GB * $2.30 Region: East US first 5GB free per month       | $4.60 
-| **Stream Analytics**   | 2 * Standard Streaming Unit, 1 unit(s) 1 * $80.30 Region: East US         | $160.60  
+| **Azure Automation Account**        | Capability: Process Automation
+                                        500 minutes of process automation and 744 hours of watchers are free each month.    | $0.00   
+| **Notification Hub**       | Free, Includes 1 million pushes for 500 active devices                          | $0.00 
+| **Application Insight**       | Basic, 1GB * $2.30 First 5GB free per month       | $2.30 
+| **Stream Analytics**   | Standard Streaming Unit, 1 unit(s) 1 * $80.30          | $80.30  
 | **Traffic Manager**     | DNS Query $0.54 + Azure Endpoint $0.36     | $0.90
-|                     | **Estimated monthly cost**          | **$364.90**
+|                     | **Estimated monthly cost**          | **$209.66**
 
 **Note: When we redeploy the solution, there will not be any extra cost, since primary region is already paid.** 
 
@@ -447,7 +448,7 @@ Prices are calculated by Considering Location as East US and Pricing Model as **
 | Application Insight      	| 2 * Basic, 1GB * $2.30 First 5GB free per month                                                                   	| $4.60            	|
 | Stream Analytics         	| 2 * Standard Streaming Unit, 1 unit(s) 1 * $80.30                                                                 	| $160.60          	|
 | Traffic Manager          	| DNS Query $0.54 + Azure Endpoint $0.36                                                                            	| $0.90            	|
-|                          	| **Estimated monthly cost**                                                                                            	| **$364.90**          	|
+|                          	| **Estimated monthly cost**                                                                                            	| **$365.26**          	|
 
 
 ### 3.2 Cost Comparison: 
