@@ -534,12 +534,15 @@ Each Azure region is paired with another region within the same geography, toget
 
 ## 5. Deployment Guide for the Solution
 
-To deploy the Basic, Standard or Premium Solution please refer **[Deployment Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/DeploymentGuide.md)**.
+To deploy the Basic, Standard or Premium Solution please refer **[Deployment Guide Documentation]
+(https://github.com/sysgain/MSIotDeviceManagement/wiki/Deployment-Guide)**.
 
 ## 6. User Guide for the Solution
 
-For Running Blink Application and verifying the Device Management Web application, please refer **[User Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/UserGuide.md)**.
+For Running Blink Application and verifying the Device Management Web application, please refer **[User Guide Documentation]
+(https://github.com/sysgain/MSIotDeviceManagement/wiki/User-Guide)**.
 
 ## 7. Administrator Guide for the Solution
 
-To configure and validate the Standard and Premium Solution, please refer the **[Administrator Guide Documentation](https://github.com/sysgain/MSIotDeviceManagement/blob/master/MSIotDeviceManagement-wiki/AdminGuide.md)**.
+To configure and validate the Standard and Premium Solution, please refer the **[Administrator Guide Documentation]
+(https://github.com/sysgain/MSIotDeviceManagement/wiki/Admin-Guide)**.
