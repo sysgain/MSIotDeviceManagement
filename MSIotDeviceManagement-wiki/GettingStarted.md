@@ -417,8 +417,7 @@ Prices are calculated by Location as East US and Pricing Model as **“PAYG”**
 | **Cosmos DB**   | Standard, throughput 400 RU/s (Request Units per second) 4x100 Rus(Throughput)- $23.36 10 GB storage – $2.50   | $25.86
 | **IoT HUB**        | Standard Tier: S1, Unlimited devices, 1 Unit-$25.00/per month 400,000 messages/day          | $25.00    
 | **Log Analytics**      | First 5GB of data storage is free. Per GB(Standalone) Region East US. After finishing 5GB, $2.30 per GB.     | $2.30   
-| **Azure Automation Account**        | Capability: Process Automation
-                                        500 minutes of process automation and 744 hours of watchers are free each month.    | $0.00   
+| **Azure Automation Account**        | Capability: Process Automation     500 minutes of process automation and 744 hours of watchers are free each month.    | $0.00   
 | **Notification Hub**       | Free, Includes 1 million pushes for 500 active devices                          | $0.00 
 | **Application Insight**       | Basic, 1GB * $2.30 First 5GB free per month       | $2.30 
 | **Stream Analytics**   | Standard Streaming Unit, 1 unit(s) 1 * $80.30          | $80.30  
